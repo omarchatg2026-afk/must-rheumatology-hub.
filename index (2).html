@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rheumatic Disease Awareness at MUST University</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#fff;--ink:#0f2a4a;--mut:#4a5d75;--g:#0a8458;--gl:#a8e6c8;--navy:#0f2a4a;--card:#f2f7f5;--line:#d9e4df;--bar:#dfe8e4;--red:#d9534f;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0b1b30;--ink:#eaf2f8;--mut:#a9bccd;--card:#12294a;--line:#25405f;--bar:#25405f;--g:#3dc791}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans",system-ui,sans-serif;line-height:1.6}
+.w{max-width:1140px;margin:0 auto;padding:0 20px}
+.top{background:var(--g);color:#fff;font-size:12px;font-weight:600;letter-spacing:.08em}
+.top .w{display:flex;justify-content:space-between;padding-top:6px;padding-bottom:6px}
+nav .w{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;line-height:1.1}
+.logo i{width:40px;height:40px;border:2px solid var(--g);border-radius:50%;display:grid;place-items:center;color:var(--g);font-style:normal;font-size:20px}
+.logo small{display:block;color:var(--g);font-size:10px;letter-spacing:.14em}
+nav a{color:var(--mut);text-decoration:none;font-weight:600;font-size:14px;margin:0 10px}
+nav .links{display:none}@media(min-width:760px){nav .links{display:block}}
+.btn{display:inline-block;background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;font-size:14px;text-decoration:none}
+.hero{background:linear-gradient(120deg,#0f2a4a,#124a5c);color:#fff;padding:56px 0;border-bottom:18px solid var(--g)}
+.hero .w{display:grid;gap:36px;grid-template-columns:1fr}@media(min-width:860px){.hero .w{grid-template-columns:1.2fr 1fr;align-items:center}}
+.hero small{color:var(--gl);font-weight:600;letter-spacing:.1em;font-size:12px}
+h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:12px 0 16px;letter-spacing:-.03em}
+h1 b{color:var(--gl)}
+.hero p{color:#d6e4ee;max-width:520px}
+.btns a{margin:6px 8px 0 0}.btn.o{background:none;border:1px solid #8fb3c4}
+.big{border:1px solid #3d7a7a;border-radius:20px;padding:28px;background:rgba(255,255,255,.06)}
+.big .n{font-size:clamp(64px,12vw,104px);font-weight:800;letter-spacing:-.05em;line-height:1}.big .n span{font-size:.45em}
+.pb{height:8px;background:#2a5a68;border-radius:9px;margin:18px 0}.pb i{display:block;height:100%;width:30.3%;background:#7fe0b0;border-radius:9px}
+.two{display:flex;gap:28px;border-top:1px solid #3d7a7a;padding-top:16px;font-size:13px;color:#c5d8e4}.two b{display:block;color:#fff;font-size:22px}
+section{padding:56px 0}
+h2{font-size:clamp(26px,4vw,38px);letter-spacing:-.02em;line-height:1.15;margin:0 0 24px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.k{background:var(--card);border-radius:14px;padding:22px}.k b{display:block;font-size:34px;color:var(--g);letter-spacing:-.03em;line-height:1.1}.k span{color:var(--mut);font-size:14px}
+.abs p{max-width:760px;margin:0 0 14px}.abs strong{color:var(--g)}
+.fig{background:var(--card);border-radius:14px;padding:22px;margin-bottom:18px}.fig h3{margin:0 0 4px;font-size:18px}.fig .c{color:var(--mut);font-size:13px;margin:0 0 16px}
+.r{display:grid;grid-template-columns:minmax(110px,190px) 1fr;gap:12px;align-items:center;margin:10px 0;font-size:13px}
+.t{height:22px;background:var(--bar);border-radius:5px;overflow:hidden}.t i{display:block;height:100%;background:var(--g);color:#fff;font-size:12px;font-weight:600;padding-left:8px;line-height:22px;white-space:nowrap}.t i.b{background:#3b6ea8}.t i.l{background:#9db9d6;color:#0f2a4a}.t i.x{background:var(--red)}
+.lg{font-size:12px;color:var(--mut);margin-top:8px}.lg u{text-decoration:none;display:inline-block;width:10px;height:10px;border-radius:2px;margin:0 4px 0 12px;background:#3b6ea8}.lg u+u{background:#9db9d6}
+.team{color:var(--mut);max-width:760px}
+footer{background:var(--navy);color:#b7cadb;font-size:13px;padding:24px 0}
+
+/* Conference welcome and restrained number animations – removable enhancement */
+.welcome-overlay[hidden]{display:none!important}
+.welcome-overlay{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:rgba(5,19,36,.76);backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);overflow-y:auto}
+.welcome-panel{position:relative;width:min(100%,590px);padding:clamp(28px,5vw,52px);border:1px solid rgba(126,224,176,.38);border-radius:26px;background:linear-gradient(145deg,#102e4f 0%,#10283e 62%,#104b48 130%);color:#fff;box-shadow:0 28px 85px rgba(0,0,0,.36);text-align:center;animation:welcome-in .48s cubic-bezier(.2,.8,.2,1) both}
+.welcome-panel .welcome-seal{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 20px;border:2px solid #7ee0b0;border-radius:50%;font-size:27px;font-weight:800;color:#7ee0b0}
+.welcome-eyebrow{display:block;color:#9de9c7;font-size:11px;font-weight:800;letter-spacing:.14em;line-height:1.5;text-transform:uppercase}
+.welcome-panel h2{margin:17px 0 18px;color:#fff;font-size:clamp(30px,5vw,42px);line-height:1.13;letter-spacing:-.035em}
+.welcome-highlight{margin:0 0 12px;color:#96eec6;font-size:clamp(16px,2.5vw,19px);font-weight:800;line-height:1.45}
+.welcome-description{max-width:440px;margin:0 auto;color:#d8e8ed;font-size:15px;line-height:1.7}
+.welcome-cta{display:inline-flex;justify-content:center;align-items:center;gap:12px;margin:27px auto 15px;padding:14px 24px;min-height:48px;background:#7ee0b0;color:#102a4a;border:0;border-radius:999px;font:800 15px 'Noto Sans',system-ui,sans-serif;cursor:pointer;transition:background .2s,transform .2s}
+.welcome-cta:hover{background:#b7f1d7;transform:translateY(-2px)}
+.welcome-cta:focus-visible,.welcome-close:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.welcome-footnote{display:block;color:#b8d4d8;font-size:12px}
+.welcome-close{position:absolute;top:15px;right:15px;width:38px;height:38px;border:1px solid rgba(255,255,255,.24);border-radius:50%;background:rgba(255,255,255,.08);color:#fff;font-size:25px;line-height:1;cursor:pointer}
+html.welcome-open,html.welcome-open body{overflow:hidden}
+.big .n .count-number{font-size:inherit}
+@keyframes welcome-in{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:480px){.welcome-panel{padding:36px 23px 30px;border-radius:19px}.welcome-panel h2{font-size:30px}.welcome-close{top:10px;right:10px}.welcome-description{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.welcome-panel{animation:none}.welcome-cta{transition:none}.welcome-cta:hover{transform:none}}
+
+/* ================================================================
+   OPTIONAL CONFERENCE ANIMATION PACK (v2) — STYLES START
+   Remove this block + HTML elements + script between markers to undo.
+   Or just set individual flags to false in MUST_EFFECTS_CONFIG below.
+   All scientific text, figures, values and original welcome stay intact.
+   ================================================================ */
+/* Reading progress: subtle and above site content, below the welcome. */
+#reading-progress[hidden]{display:none!important}
+#reading-progress{position:fixed;inset:0 0 auto;z-index:950;width:100%;height:4px;background:transparent;pointer-events:none}
+#reading-progress>span{display:block;width:0;height:100%;background:linear-gradient(90deg,#38a97e,#92e7bb);box-shadow:0 0 8px rgba(68,203,152,.28);will-change:width}
+
+/* Scroll-reveal never hides content when JavaScript or observer is off. */
+.motion-reveal{opacity:0;transform:translate3d(0,17px,0);transition:opacity .62s ease,transform .62s cubic-bezier(.2,.7,.18,1);transition-delay:var(--reveal-delay,0ms)}
+.motion-reveal.is-revealed{opacity:1;transform:translate3d(0,0,0)}
+
+/* Bar widths remain exactly as in the original HTML; animate scale only. */
+.fig.graph-motion .t i,.hero.graph-motion .pb i{transform:scaleX(0);transform-origin:left center;transition:transform 1050ms cubic-bezier(.16,1,.3,1);transition-delay:var(--bar-delay,0ms);will-change:transform}
+.fig.graph-motion.graph-visible .t i,.hero.graph-motion.graph-visible .pb i{transform:scaleX(1)}
+
+/* Finding cards respond to hover, keyboard activation and tap selection. */
+#findings .k.card-tappable{position:relative;border:1px solid transparent;cursor:pointer;outline-offset:3px;transition:transform .28s cubic-bezier(.2,.75,.2,1),box-shadow .28s ease,border-color .28s ease,background .28s ease}
+@media (hover:hover) and (pointer:fine){#findings .k.card-tappable:hover{transform:translateY(-5px);border-color:rgba(36,160,113,.27);box-shadow:0 14px 28px rgba(7,53,60,.12)}}
+#findings .k.card-tappable:active{transform:translateY(-1px)}
+#findings .k.card-tappable.card-focused{border-color:var(--g);box-shadow:0 0 0 2px rgba(25,171,114,.17),0 12px 30px rgba(7,53,60,.13);background:var(--card)}
+#findings .k.card-tappable:focus-visible{outline:3px solid #42b58a}
+
+/* Academic section headings: modest green underline, no layout shifts. */
+section h2.motion-title{position:relative;padding-bottom:15px}
+section h2.motion-title::after{content:"";position:absolute;left:0;bottom:3px;height:4px;width:64px;border-radius:3px;background:linear-gradient(90deg,#0a8458,#80dcb0);transform:scaleX(0);transform-origin:left center;transition:transform .72s cubic-bezier(.2,.75,.18,1)}
+section h2.motion-title.title-visible::after{transform:scaleX(1)}
+
+/* Lightweight vector network graphic. Decorative, non-interactive. */
+.hero.medical-bg-enabled{position:relative;isolation:isolate;overflow:hidden}
+.hero.medical-bg-enabled .w{position:relative;z-index:2}
+.medical-background[hidden]{display:none!important}
+.medical-background{position:absolute;inset:0;z-index:0;overflow:hidden;pointer-events:none;opacity:.33}
+.medical-background::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at 75% 48%,rgba(125,221,177,.14),transparent 36%);animation:med-aura 14s ease-in-out infinite alternate}
+.medical-background svg{position:absolute;right:-60px;top:50%;width:min(68%,760px);height:115%;transform:translateY(-50%);overflow:visible}
+.medical-background .med-float-a{transform-origin:58% 51%;animation:med-float-a 16s ease-in-out infinite alternate}
+.medical-background .med-float-b{transform-origin:48% 40%;animation:med-float-b 19s ease-in-out infinite alternate}
+@keyframes med-float-a{from{transform:translate3d(-9px,6px,0) rotate(-3deg)}to{transform:translate3d(10px,-10px,0) rotate(2.5deg)}}
+@keyframes med-float-b{from{transform:translate3d(7px,-12px,0) rotate(2deg)}to{transform:translate3d(-10px,8px,0) rotate(-2.5deg)}}
+@keyframes med-aura{from{opacity:.48;transform:translate3d(-1%,0,0)}to{opacity:1;transform:translate3d(1%,-1%,0)}}
+@media(max-width:760px){.medical-background{opacity:.19}.medical-background svg{width:110%;right:-45%;height:100%}}
+@media(prefers-reduced-motion:reduce){
+  .motion-reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .fig.graph-motion .t i,.hero.graph-motion .pb i{transform:none!important;transition:none!important}
+  #findings .k.card-tappable{transition:none!important}
+  #findings .k.card-tappable:hover{transform:none!important}
+  section h2.motion-title::after{transform:scaleX(1)!important;transition:none!important}
+  .medical-background .med-float-a,.medical-background .med-float-b,.medical-background::before{animation:none!important}
+}
+@media print{
+  #reading-progress,.medical-background{display:none!important}
+  .motion-reveal{opacity:1!important;transform:none!important}
+  .fig.graph-motion .t i,.hero.graph-motion .pb i{transform:none!important}
+  section h2.motion-title::after{transform:scaleX(1)!important}
+}
+/* OPTIONAL CONFERENCE ANIMATION PACK — STYLES END */
+
+</style>
+</head>
+<body>
+
+<!-- OPTIONAL CONFERENCE ANIMATION PACK — PROGRESS BAR START -->
+<div id="reading-progress" aria-hidden="true" hidden><span></span></div>
+<!-- OPTIONAL CONFERENCE ANIMATION PACK — PROGRESS BAR END -->
+
+<!-- Welcome overlay: shown once per browsing session, never blocks content without JavaScript -->
+<div class="welcome-overlay" id="welcome-overlay" hidden>
+  <div class="welcome-panel" role="dialog" aria-modal="true" aria-labelledby="welcome-heading" aria-describedby="welcome-description" tabindex="-1">
+    <button class="welcome-close" id="welcome-close" type="button" aria-label="Close welcome message">&times;</button>
+    <div class="welcome-seal" aria-hidden="true">M</div>
+    <span class="welcome-eyebrow">MUST UNIVERSITY · RESEARCH SHOWCASE 2026</span>
+    <h2 id="welcome-heading">Welcome to Our<br>Research Experience</h2>
+    <p class="welcome-highlight">Thank you for attending the conference.</p>
+    <p class="welcome-description" id="welcome-description">We're delighted to share our study on rheumatic disease awareness at MUST University and invite you to explore the evidence behind our findings.</p>
+    <button class="welcome-cta" id="welcome-enter" type="button">Explore Our Research <span aria-hidden="true">→</span></button>
+    <span class="welcome-footnote">A cross-sectional study · 1,271 participants</span>
+  </div>
+</div>
+
+<div class="top"><div class="w"><span>MUST UNIVERSITY</span><span>2026 RESEARCH SHOWCASE</span></div></div>
+<nav><div class="w"><div class="logo"><i>M</i><div>MUST<small>RESEARCH HUB</small></div></div>
+<div class="links"><a href="#findings">Key findings</a><a href="#abstract">Abstract</a><a href="#figures">Figures</a><a href="#team">Team</a></div>
+<a class="btn" href="#abstract">Read abstract</a></div></nav>
+
+<header class="hero">
+
+<!-- OPTIONAL CONFERENCE ANIMATION PACK — MEDICAL BACKGROUND START -->
+<div class="medical-background" id="medical-background" aria-hidden="true" hidden>
+  <svg viewBox="0 0 700 600" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="med-stroke" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9ebdd"/><stop offset="1" stop-color="#64c99b"/></linearGradient>
+    </defs>
+    <g class="med-float-a" fill="none" stroke="url(#med-stroke)" stroke-width="1.7" opacity=".84">
+      <circle cx="395" cy="300" r="198" stroke-dasharray="4 15" stroke-width="1.5"/>
+      <circle cx="395" cy="300" r="150" stroke-width="1.1" opacity=".7"/>
+      <path d="M129 248L215 188L302 232L397 133L514 184L598 260L521 350L609 420M215 188L254 349L363 402L521 350M302 232L397 316L521 350M254 349L180 454L363 402L475 483L609 420M397 133L397 316L475 483M129 248L254 349"/>
+      <path d="M180 454L104 376M598 260L645 180M514 184L566 89" opacity=".55"/>
+    </g>
+    <g class="med-float-a" fill="#9fe8c2" stroke="#102e4f" stroke-width="1.8">
+      <circle cx="129" cy="248" r="6"/><circle cx="215" cy="188" r="7"/><circle cx="302" cy="232" r="5"/>
+      <circle cx="397" cy="133" r="8"/><circle cx="514" cy="184" r="7"/><circle cx="598" cy="260" r="5"/>
+      <circle cx="254" cy="349" r="7"/><circle cx="397" cy="316" r="9"/><circle cx="521" cy="350" r="7"/>
+      <circle cx="180" cy="454" r="5"/><circle cx="363" cy="402" r="6"/><circle cx="475" cy="483" r="7"/>
+      <circle cx="609" cy="420" r="5"/><circle cx="104" cy="376" r="4"/>
+    </g>
+    <g class="med-float-b" fill="none" stroke="#80d7e4" stroke-width="1.5" opacity=".7">
+      <circle cx="392" cy="300" r="238" stroke-dasharray="2 16"/>
+      <path d="M91 94L163 129L209 78M559 499L619 551L675 490M460 89L537 63L612 120"/>
+      <circle cx="91" cy="94" r="4" fill="#80d7e4"/><circle cx="209" cy="78" r="4" fill="#80d7e4"/><circle cx="675" cy="490" r="5" fill="#80d7e4"/><circle cx="612" cy="120" r="5" fill="#80d7e4"/>
+    </g>
+  </svg>
+</div>
+<!-- OPTIONAL CONFERENCE ANIMATION PACK — MEDICAL BACKGROUND END -->
+
+<div class="w">
+<div><small>CROSS-SECTIONAL STUDY · GIZA, EGYPT · 2026</small>
+<h1>Rheumatic disease <b>awareness</b> at MUST University</h1>
+<p>How well do medical and non-medical participants understand rheumatology, and how safely do they use NSAIDs? Explore the evidence behind our conference poster.</p>
+<div class="btns"><a class="btn" href="#abstract" style="background:#fff;color:#0f2a4a">Read the abstract</a><a class="btn o" href="#figures">Explore results</a></div>
+<p style="font-size:13px;margin-top:22px"><span data-count="1271" data-decimals="0">1,271</span> participants · April–July 2026 · MUST University</p></div>
+<div class="big"><small>THE CENTRAL FINDING · n = 1,271</small>
+<div class="n"><b class="count-number" data-count="30.3" data-decimals="1">30.3</b><span>%</span></div>
+<p style="margin:10px 0 0">achieved good rheumatology knowledge, defined as ≥70% on applicable questions.</p>
+<div class="pb"><i></i></div>
+<div class="two"><div><b><span data-count="54.7" data-decimals="1">54.7</span>%</b>Mean knowledge score</div><div><b><span data-count="27.8" data-decimals="1">27.8</span>%</b>Correctly identified specialty</div></div></div>
+</div></header>
+
+<section id="findings"><div class="w"><h2>What the data revealed</h2>
+<div class="grid">
+<div class="k"><b>64.7% vs 48.5%</b><span>Mean score, medical vs non-medical participants (P &lt; 0.001)</span></div>
+<div class="k"><b>74.3% vs 51.3%</b><span>Clinical vs pre-clinical medical students (P &lt; 0.001)</span></div>
+<div class="k"><b>+18.2 points</b><span>Adjusted gain linked to previous rheumatology teaching</span></div>
+<div class="k"><b>27.8%</b><span>Knew rheumatology is a branch of internal medicine, not orthopedics</span></div>
+<div class="k"><b>33.8%</b><span>Recognized dry eyes and mouth as a possible manifestation</span></div>
+<div class="k"><b>37.1%</b><span>Used NSAIDs without a prescription; 30.8% used them at least weekly</span></div>
+</div></div></section>
+
+<section id="abstract" class="abs" style="background:var(--card)"><div class="w"><h2>Abstract</h2>
+<p><strong>Background.</strong> Awareness of rheumatic diseases and safe use of NSAIDs may affect care seeking and medication decisions.</p>
+<p><strong>Methods.</strong> A cross-sectional survey of a convenience sample aged 16–80 years on the MUST campus in Giza, Egypt, from April to July 2026. An anonymous, self-administered questionnaire assessed rheumatology knowledge and NSAID practices. Good knowledge was a score of at least 70%.</p>
+<p><strong>Results.</strong> Among 1,271 participants the mean score was 54.7% (SD 25.2); 385 (30.3%) reached good knowledge. Medical students and physicians scored higher than others (64.7% vs 48.5%). Medical participants reported more self-medication (21.0% vs 13.4%) and more use without a prescription (41.2% vs 34.6%).</p>
+<p><strong>Conclusion.</strong> Knowledge was limited, particularly outside the medical group. Medical training was associated with higher knowledge but not with safer NSAID practice. Education should cover the systemic manifestations of rheumatic disease and safe NSAID use. The design does not establish causality.</p></div></section>
+
+<section id="figures"><div class="w"><h2>Figures</h2>
+<div class="fig"><h3>Good knowledge (≥70%) by group</h3><p class="c">Percentage of participants in each group reaching good knowledge.</p>
+<div class="r"><span>Pre-clinical students (n = 179)</span><div class="t"><i style="width:15.6%">15.6%</i></div></div>
+<div class="r"><span>Clinical students (n = 244)</span><div class="t"><i style="width:71.3%">71.3%</i></div></div>
+<div class="r"><span>Medical participants (n = 486)</span><div class="t"><i style="width:48.1%">48.1%</i></div></div>
+<div class="r"><span>Non-medical participants (n = 785)</span><div class="t"><i style="width:19.2%">19.2%</i></div></div></div>
+<div class="fig"><h3>NSAID practices: medical vs non-medical</h3><p class="c">Percentage within each group.</p>
+<div class="r"><span>Self-medication</span><div><div class="t"><i class="b" style="width:21%">21.0%</i></div><div class="t" style="margin-top:3px"><i class="l" style="width:13.4%">13.4%</i></div></div></div>
+<div class="r"><span>Use without a prescription</span><div><div class="t"><i class="b" style="width:41.2%">41.2%</i></div><div class="t" style="margin-top:3px"><i class="l" style="width:34.6%">34.6%</i></div></div></div>
+<div class="r"><span>Believes mixing NSAIDs adds effect</span><div><div class="t"><i class="b" style="width:28.8%">28.8%</i></div><div class="t" style="margin-top:3px"><i class="l" style="width:24.6%">24.6%</i></div></div></div>
+<div class="r"><span>Uses at least weekly</span><div><div class="t"><i class="b" style="width:32.7%">32.7%</i></div><div class="t" style="margin-top:3px"><i class="l" style="width:29.6%">29.6%</i></div></div></div>
+<div class="lg"><u></u>Medical<u></u>Non-medical</div></div>
+<div class="fig"><h3>Awareness centres on the joints</h3><p class="c">Share answering correctly.</p>
+<div class="r"><span>Rheumatoid arthritis is rheumatological</span><div class="t"><i style="width:81.1%">81.1%</i></div></div>
+<div class="r"><span>Skin rash</span><div class="t"><i style="width:37.8%">37.8%</i></div></div>
+<div class="r"><span>Dry eyes and dry mouth</span><div class="t"><i style="width:33.8%">33.8%</i></div></div>
+<div class="r"><span>Recurrent mouth ulcers</span><div class="t"><i style="width:33.7%">33.7%</i></div></div>
+<div class="r"><span>Field is internal medicine</span><div class="t"><i class="x" style="width:27.8%">27.8%</i></div></div></div>
+</div></section>
+
+<section id="team" style="padding-top:0"><div class="w"><h2>Research team</h2>
+<p class="team">Osama Mohamed Abdelhalim, Omar Haney Omar, Mostafa Tarek Zein, Mohamed Khaled Ali, Ahmed Yasser Fathey and Mohamed Mohamed Abdelnaiem (Group 41).<br>Under the supervision of Prof. Mohamed Reda Awad, Head of Rheumatology, Rehabilitation and Physical Medicine, Faculty of Medicine, Misr University for Science and Technology, Giza, Egypt.</p></div></section>
+<footer><div class="w">Public Awareness and Knowledge of Rheumatic Diseases at MUST University: A Cross-Sectional Study. Ethical approval no. 2026/0081.</div></footer>
+
+<script>
+/* Self-contained, accessible welcome and animated results; no tracking or external scripts. */
+(function(){
+  'use strict';
+  var overlay=document.getElementById('welcome-overlay');
+  var closeButton=document.getElementById('welcome-close');
+  var enterButton=document.getElementById('welcome-enter');
+  var sessionKey='must-research-conference-welcome-v1';
+  var earlierFocus=null;
+  var countersReady=false;
+  var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function sessionSeen(){try{return sessionStorage.getItem(sessionKey)==='1'}catch(e){return false}}
+  function rememberSession(){try{sessionStorage.setItem(sessionKey,'1')}catch(e){}}
+  function displayNumber(value,decimals){return Number(value).toLocaleString('en-US',{minimumFractionDigits:decimals,maximumFractionDigits:decimals})}
+  function animateNumber(el){
+    var finalValue=Number(el.getAttribute('data-count'));
+    var places=Number(el.getAttribute('data-decimals')||'0');
+    var finalText=displayNumber(finalValue,places);
+    if(!Number.isFinite(finalValue)||reduceMotion){el.textContent=finalText;return}
+    var begin=null,duration=1250;
+    function frame(now){
+      if(begin===null)begin=now;
+      var progress=Math.min((now-begin)/duration,1);
+      var eased=1-Math.pow(1-progress,3);
+      el.textContent=displayNumber(finalValue*eased,places);
+      if(progress<1)window.requestAnimationFrame(frame);
+      else el.textContent=finalText;
+    }
+    window.requestAnimationFrame(frame);
+  }
+  function startCounters(){
+    if(countersReady)return;
+    countersReady=true;
+    var numbers=document.querySelectorAll('[data-count]');
+    if(!('IntersectionObserver' in window)){
+      numbers.forEach(animateNumber);return;
+    }
+    var observer=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){observer.unobserve(entry.target);animateNumber(entry.target)}
+      });
+    },{threshold:.35});
+    numbers.forEach(function(el){observer.observe(el)});
+  }
+  function hideWelcome(){
+    if(overlay.hidden)return;
+    overlay.hidden=true;
+    document.documentElement.classList.remove('welcome-open');
+    document.removeEventListener('keydown',onKeydown);
+    rememberSession();
+    if(earlierFocus && earlierFocus.isConnected){try{earlierFocus.focus({preventScroll:true})}catch(e){earlierFocus.focus()}}
+    startCounters();
+  }
+  function onKeydown(event){
+    if(event.key==='Escape'){hideWelcome();return}
+    if(event.key==='Tab'){
+      var active=document.activeElement;
+      if(event.shiftKey&&active===closeButton){event.preventDefault();enterButton.focus()}
+      else if(!event.shiftKey&&active===enterButton){event.preventDefault();closeButton.focus()}
+    }
+  }
+  function showWelcome(){
+    earlierFocus=document.activeElement;
+    overlay.hidden=false;
+    document.documentElement.classList.add('welcome-open');
+    document.addEventListener('keydown',onKeydown);
+    closeButton.focus();
+  }
+  closeButton.addEventListener('click',hideWelcome);
+  enterButton.addEventListener('click',hideWelcome);
+  overlay.addEventListener('click',function(event){if(event.target===overlay)hideWelcome()});
+  if(sessionSeen())startCounters();
+  else showWelcome();
+})();
+</script>
+
+<!-- OPTIONAL CONFERENCE ANIMATION PACK — JAVASCRIPT START -->
+<script>
+(function () {
+  'use strict';
+  /* Set any feature to false to turn it off independently.
+     All six are nonessential effects; the research remains intact. */
+  var MUST_EFFECTS_CONFIG = {
+    scrollReveal: true,
+    animatedGraphs: true,
+    interactiveCards: true,
+    readingProgress: true,
+    animatedTitles: true,
+    medicalBackground: true
+  };
+  var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var supportsObserver = 'IntersectionObserver' in window;
+  var animate = !reducedMotion && supportsObserver;
+
+  if (MUST_EFFECTS_CONFIG.medicalBackground) {
+    var medicalBG = document.getElementById('medical-background');
+    if (medicalBG) { medicalBG.hidden = false; document.querySelector('.hero').classList.add('medical-bg-enabled'); }
+  }
+
+  // One-time entrance reveals; no timers, and no hidden content if motion is disabled.
+  if (MUST_EFFECTS_CONFIG.scrollReveal && animate) {
+    var targets = Array.prototype.slice.call(document.querySelectorAll(
+      'section .w > h2, section .abs p, section .grid .k, section .fig, section .team'
+    ));
+    targets.forEach(function (item, index) {
+      item.classList.add('motion-reveal');
+      if (item.matches('#findings .k')) {
+        var nth = Array.prototype.indexOf.call(item.parentElement.children, item);
+        item.style.setProperty('--reveal-delay', Math.min(nth * 65, 260) + 'ms');
+      }
+    });
+    var revealObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08, rootMargin: '0px 0px -25px 0px' });
+    targets.forEach(function (item) { revealObserver.observe(item); });
+  }
+
+  // Existing bar widths/data are retained verbatim; animate only their scale.
+  if (MUST_EFFECTS_CONFIG.animatedGraphs && animate) {
+    var figures = Array.prototype.slice.call(document.querySelectorAll('#figures .fig'));
+    var hero = document.querySelector('.hero');
+    if (hero) figures.unshift(hero);
+    var chartObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('graph-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .14 });
+    figures.forEach(function (fig) {
+      fig.classList.add('graph-motion');
+      Array.prototype.forEach.call(fig.querySelectorAll('.t i'), function (bar, i) {
+        bar.style.setProperty('--bar-delay', Math.min(i * 90, 650) + 'ms');
+      });
+      chartObserver.observe(fig);
+    });
+  }
+
+  // Tap or press Enter/Space to focus a key finding; tap again to release.
+  if (MUST_EFFECTS_CONFIG.interactiveCards) {
+    var cards = Array.prototype.slice.call(document.querySelectorAll('#findings .k'));
+    function toggleCard(card) {
+      var shouldFocus = !card.classList.contains('card-focused');
+      cards.forEach(function (c) { c.classList.remove('card-focused'); c.setAttribute('aria-pressed', 'false'); });
+      if (shouldFocus) { card.classList.add('card-focused'); card.setAttribute('aria-pressed', 'true'); }
+    }
+    cards.forEach(function (card) {
+      card.classList.add('card-tappable');
+      card.setAttribute('role', 'button');
+      card.setAttribute('tabindex', '0');
+      card.setAttribute('aria-pressed', 'false');
+      card.setAttribute('title', 'Highlight this research finding');
+      card.addEventListener('click', function () { toggleCard(card); });
+      card.addEventListener('keydown', function (event) {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault(); toggleCard(card);
+        }
+      });
+    });
+  }
+
+  if (MUST_EFFECTS_CONFIG.readingProgress) {
+    var track = document.getElementById('reading-progress');
+    var fill = track && track.firstElementChild;
+    if (track && fill) {
+      track.hidden = false;
+      var pending = false;
+      function updateProgress() {
+        pending = false;
+        var height = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+        var position = Math.max(0, window.scrollY || window.pageYOffset || 0);
+        fill.style.width = (height === 0 ? 100 : Math.min(100, 100 * position / height)) + '%';
+      }
+      function scheduleProgress() {
+        if (pending) return;
+        pending = true;
+        window.requestAnimationFrame(updateProgress);
+      }
+      window.addEventListener('scroll', scheduleProgress, { passive: true });
+      window.addEventListener('resize', scheduleProgress, { passive: true });
+      window.addEventListener('load', scheduleProgress);
+      scheduleProgress();
+    }
+  }
+
+  if (MUST_EFFECTS_CONFIG.animatedTitles) {
+    var headings = Array.prototype.slice.call(document.querySelectorAll('section h2'));
+    headings.forEach(function (heading) { heading.classList.add('motion-title'); });
+    if (animate) {
+      var titlesObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('title-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: .2 });
+      headings.forEach(function (heading) { titlesObserver.observe(heading); });
+    } else {
+      headings.forEach(function (heading) { heading.classList.add('title-visible'); });
+    }
+  }
+})();
+</script>
+<!-- OPTIONAL CONFERENCE ANIMATION PACK — JAVASCRIPT END -->
+
+</body>
+</html>
